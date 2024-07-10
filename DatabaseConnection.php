@@ -3,7 +3,7 @@
 class Database {
     private static $instance = null;
     private $connection;
-
+    private function __clone() {}
     private function __construct($config) {
         try {
             $this->connection = new PDO($config['dsn'], $config['username'], $config['password']);
