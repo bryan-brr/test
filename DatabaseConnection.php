@@ -1,23 +1,20 @@
 <?php
 //interface DBConnectionInterface {}
-class Database {
+final class Database {
     private static $instance = null;
     private $connection;
+    
     private function __clone() {}
+    
     private function __construct($config) {
         try {
-            $this->connection = new PDO($config['dsn'], $config['username'], $config['password']);
+            $this->connection = new PDO($config["dsn"], $config["username"], $config["password"]);
             $this->connection->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
         } catch (PDOException $e) {
             //error_log("Connection failed: " . $e->getMessage());
             throw new Exception("Database connection error");
         }
     }
-  
-    private function init(): array {
-      
-    }
-
     public static function getInstance($config): Database {
         if (self::$instance === null) {
             self::$instance = new Database($config);
@@ -29,6 +26,7 @@ class Database {
         return $this->connection;
     }
     public function closeConnection(): void {
+        $this->connection->close();
         $this->connection = null;
     }
 }
