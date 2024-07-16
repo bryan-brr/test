@@ -1,3 +1,19 @@
+Penetration Testing Execution Standard:
+
+https://readthedocs.org/projects/pentest-standard/downloads/pdf/latest/
+
+
+
+https://cheatsheetseries.owasp.org/cheatsheets/Authentication_Cheat_Sheet.html
+
+
+OWASP Testing Guide:
+
+https://wiki.owasp.org/images/9/97/OWASP_Testing_Guide_Version_3.pdf
+
+https://wiki.owasp.org/images/9/97/OWASP_Testing_Guide_Version_3.pdf
+
+
 Wazuh docker:
 
   https://es.linux-console.net/?p=20658
