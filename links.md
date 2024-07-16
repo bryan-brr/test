@@ -1,8 +1,12 @@
+Pentesting Report Guide:
+
+https://www.hackthebox.com/blog/penetration-testing-reports-template-and-guide
+
+https://www.browserstack.com/guide/penetration-testing-report-guide
+
 Penetration Testing Execution Standard:
 
 https://readthedocs.org/projects/pentest-standard/downloads/pdf/latest/
-
-
 
 https://cheatsheetseries.owasp.org/cheatsheets/Authentication_Cheat_Sheet.html
 
