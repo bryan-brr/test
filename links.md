@@ -1,3 +1,7 @@
+Wazuh Rules:
+
+https://medium.com/@josephalan17201972/custom-alert-rules-in-wazuh-tryhackme-write-up-613e8e99a6b3
+
 PHP Login Guide:
 
 https://codeshack.io/secure-login-system-php-mysql/
