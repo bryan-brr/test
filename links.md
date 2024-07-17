@@ -1,3 +1,7 @@
+SAMM (Software Assurance Maturity Model):
+
+https://owaspsamm.org/about/
+
 Wazuh Rules:
 
 https://medium.com/@josephalan17201972/custom-alert-rules-in-wazuh-tryhackme-write-up-613e8e99a6b3
