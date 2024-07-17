@@ -15,8 +15,7 @@ OWASP Testing Guide:
 
 https://wiki.owasp.org/images/9/97/OWASP_Testing_Guide_Version_3.pdf
 
-https://wiki.owasp.org/images/9/97/OWASP_Testing_Guide_Version_3.pdf
-
+https://wiki.owasp.org/images/d/dd/OWASP6thAppSec_TestingGuidev2_MatteoMeuci.pdf
 
 Wazuh docker:
 
