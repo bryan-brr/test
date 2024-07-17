@@ -30,6 +30,14 @@ Docker Compose Syntax:
 
  https://gabrieltanner.org/blog/docker-compose/
 
+ Volúmenes en Docker:
+
+ https://kinsta.com/es/blog/volumenes-docker-compose/
+
+ Docker Compose PHP MyAdmin, NGINX, MySQL:
+
+ https://www.kisphp.com/docker/docker-compose-for-php-nginx-and-mysql
+
 C2 Info:
 
  https://www.varonis.com/blog/what-is-c2
