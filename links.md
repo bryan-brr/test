@@ -1,3 +1,9 @@
+PHP Login Guide:
+
+https://codeshack.io/secure-login-system-php-mysql/
+
+https://www.tutorialrepublic.com/php-tutorial/php-mysql-login-system.php
+
 Cyber Defense Courses:
 
 https://www.sans.org/job-roles-roadmap/cyber-defense/
