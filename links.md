@@ -1,3 +1,7 @@
+Python for Cybersecurity:
+
+https://github.com/bpbpublications/Python-for-Cybersecurity-Cookbook/tree/main
+
 SAMM (Software Assurance Maturity Model):
 
 https://owaspsamm.org/about/
