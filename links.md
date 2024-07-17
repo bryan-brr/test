@@ -1,3 +1,7 @@
+Python Singleton Pattern:
+
+https://stackabuse.com/creating-a-singleton-in-python/
+
 Python for Cybersecurity:
 
 https://github.com/bpbpublications/Python-for-Cybersecurity-Cookbook/tree/main
