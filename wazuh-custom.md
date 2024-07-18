@@ -8,6 +8,8 @@
 
 - [Wazuh Rules](#chapter-3)
 
+- [Python Logging](#chapter-4)
+
 ## Wazuh Regex Syntax
 
 ### [Wazuh Regex Documentation](https://documentation.wazuh.com/current/user-manual/ruleset/ruleset-xml-syntax/regex.html)
@@ -48,3 +50,19 @@ sudo nano /var/ossec/etc/ossec.conf
 ```bash
 sudo  /var/ossec/bin/wazuh-logtest
 ```
+## Python Logging
+
+[Logging Singleton Pattern](https://towardsdev.com/implementing-the-singleton-pattern-in-python-1a407af9e791)
+
+Logging usage example
+
+```python
+import logging
+
+logging.basicConfig(filename = "test-logs.log", level = logging.DEBUG, format = "%(asctime)s %(levelname)s %(threadName)-10s %(message)s",)
+
+test_message = "Test message"
+
+logging.debug(test_message)
+```
+
