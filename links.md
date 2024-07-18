@@ -18,6 +18,14 @@ Python for Cybersecurity:
 
 https://github.com/bpbpublications/Python-for-Cybersecurity-Cookbook/tree/main
 
+Python Virtual Environment Set up:
+
+https://www.pythonguis.com/tutorials/python-virtual-environments/
+
+Python Miniconda:
+
+https://docs.anaconda.com/miniconda/
+
 SAMM (Software Assurance Maturity Model):
 
 https://owaspsamm.org/about/
