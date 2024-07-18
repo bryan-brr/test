@@ -10,6 +10,8 @@
 
 - [Python Logging](#chapter-4)
 
+## Introduction
+### [Wazuh Data Analisis](https://documentation.wazuh.com/current/user-manual/ruleset/index.html)
 ## Wazuh Regex Syntax
 
 ### [Wazuh Regex Documentation](https://documentation.wazuh.com/current/user-manual/ruleset/ruleset-xml-syntax/regex.html)
@@ -20,6 +22,7 @@
 ### [Wazuh Decoders Documentation](https://documentation.wazuh.com/current/user-manual/ruleset/ruleset-xml-syntax/decoders.html)
 
 ### [Wazuh Creating Decoders](https://wazuh.com/blog/creating-decoders-and-rules-from-scratch/)
+### [Wazuh Creating Decoders 2](https://medium.com/@bishesh404/blog-on-wazuh-d3fdfe19abc1)
 
 ```bash
 sudo nano /var/ossec/etc/decoders/local_decoder.xml
