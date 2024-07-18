@@ -1,3 +1,7 @@
+Ansible Guide:
+
+https://docs.paramiko.org/en/latest/api/channel.html
+
 Python Singleton Pattern:
 
 https://stackabuse.com/creating-a-singleton-in-python/
