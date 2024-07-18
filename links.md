@@ -10,6 +10,10 @@ Ansible Guide:
 
 https://docs.paramiko.org/en/latest/api/channel.html
 
+Ansible Ad Hoc Commands:
+
+https://www.golinuxcloud.com/ansible-ad-hoc-commands/
+
 Python Singleton Pattern:
 
 https://stackabuse.com/creating-a-singleton-in-python/
