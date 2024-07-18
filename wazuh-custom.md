@@ -19,6 +19,8 @@
 
 ### [Wazuh Decoders Documentation](https://documentation.wazuh.com/current/user-manual/ruleset/ruleset-xml-syntax/decoders.html)
 
+### [Wazuh Creating Decoders](https://wazuh.com/blog/creating-decoders-and-rules-from-scratch/)
+
 ```bash
 sudo nano /var/ossec/etc/decoders/local_decoder.xml
 ```
@@ -52,7 +54,7 @@ sudo  /var/ossec/bin/wazuh-logtest
 ```
 ## Python Logging
 
-[Logging Singleton Pattern](https://towardsdev.com/implementing-the-singleton-pattern-in-python-1a407af9e791)
+### [Logging Singleton Pattern](https://towardsdev.com/implementing-the-singleton-pattern-in-python-1a407af9e791)
 
 Logging usage example
 
