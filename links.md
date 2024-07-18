@@ -1,3 +1,11 @@
+Explain Shell:
+
+https://explainshell.com/
+
+Mitre Defend:
+
+https://d3fend.mitre.org/
+
 Ansible Guide:
 
 https://docs.paramiko.org/en/latest/api/channel.html
