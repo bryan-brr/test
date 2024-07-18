@@ -32,6 +32,10 @@ Nginx config file structure:
 
 https://www.digitalocean.com/community/tutorials/understanding-the-nginx-configuration-file-structure-and-configuration-contexts
 
+Docker Compose Stack Example:
+
+https://linuxiac.com/how-to-set-up-lemp-stack-with-docker-compose/
+
 Budibase
 
 https://budibase.com/
