@@ -56,6 +56,10 @@ Docker Compose Stack Example:
 
 https://linuxiac.com/how-to-set-up-lemp-stack-with-docker-compose/
 
+Docker Compose Laravel Nginx MySQL:
+
+https://www.digitalocean.com/community/tutorials/how-to-set-up-laravel-nginx-and-mysql-with-docker-compose
+
 Budibase
 
 https://budibase.com/
