@@ -50,7 +50,7 @@ class TestConnection(TestConnectionBlah):
       self.client = None
 
 def main() -> None:
-  host = "10.100.10.40"
+  host = "IP"
   username = "bryan"
 
   c1 = TestConnection(host, username)
