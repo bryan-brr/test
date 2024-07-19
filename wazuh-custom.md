@@ -28,7 +28,39 @@
 sudo nano /var/ossec/etc/decoders/local_decoder.xml
 ```
 
+Having the following log format:
+
+```
+date=2024-07-19 time=12:26:59,488 ERROR Test message srcip=192.168.10.12 port=6754
+```
+
+Decoder example
 ```xml
+<!----- Custom Parent Decoder Prematch Set Up ----->
+<decoder name="python-custom-parent">
+  <prematch>^date=\d+-\d+-\d+ time=\d+:\d+:\d+,\d+</prematch>
+</decoder>
+
+<!----- Child Decoder Regex for date and time parameters ----->
+<decoder name="python-custom-child">
+  <parent>python-custom-parent</parent>
+  <regex>^date=(\d+-\d+-\d+) time=(\d+:\d+:\d+,\d+)</regex>
+  <order>date, time</order>
+</decoder>
+
+<!----- Child Decoder Regex for source IP parameter ----->
+<decoder name="python-custom-child">
+  <parent>python-custom-parent</parent>
+  <regex>srcip=(\d+.\d+.\d+.\d+)</regex>
+  <order>srcip</order>
+</decoder>
+
+<!----- Child Decoder Regex for port parameter ----->
+<decoder name="python-custom-child">
+  <parent>python-custom-parent</parent>
+  <regex>port=(\d+)</regex>
+  <order>port</order>
+</decoder>
 
 ```
 
@@ -40,6 +72,16 @@ sudo nano /var/ossec/etc/decoders/local_decoder.xml
 sudo nano /var/ossec/etc/rules/local_rules.xml
 ```
 
+```xml
+<group name="ossec">
+  <rule id="90001" level="15">
+    <decoded_as>python-custom-parent</decoded_as>
+    <description>Python test log</description>
+  </rule>
+</group>
+```
+
+
 ```bash
 sudo nano /var/ossec/etc/rules/custom_rules.xml
 ```
@@ -50,11 +92,22 @@ sudo nano /var/ossec/etc/rules/custom_rules.xml
 sudo nano /var/ossec/etc/ossec.conf
 ```
 
+```xml
+  <localfile>
+    <log_format>syslog</log_format>
+    <location>/home/bryan/test-envs/networking-env/test-logs.log</location>
+  </localfile>
+```
+
 ## Wazuh test decoder
 
 ```bash
 sudo  /var/ossec/bin/wazuh-logtest
 ```
+![image](https://github.com/user-attachments/assets/19bd9931-d0d3-477c-96a7-b6dc37274780)
+
+
+
 ## Python Logging
 
 ### [Logging Singleton Pattern](https://towardsdev.com/implementing-the-singleton-pattern-in-python-1a407af9e791)
