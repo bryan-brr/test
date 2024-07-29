@@ -1,3 +1,8 @@
+Reports:
+
+https://thedfirreport.com/
+
+
 Explain Shell:
 
 https://explainshell.com/
