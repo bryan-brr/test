@@ -2,13 +2,11 @@
 
 - [Introduction](#introduction)
 
-- [Wazuh Regex Syntax](#chapter-1)
+- [Wazuh Decoders](#wazuh-decoders)
 
-- [Wazuh Decoders](#chapter-2)
+- [Wazuh Rules](#wazuh-local-or-custom-rules)
 
-- [Wazuh Rules](#chapter-3)
-
-- [Python Logging](#chapter-4)
+- [Python Logging](#python-logging)
 
 ## Introduction
 ### [Wazuh Data Analisis](https://documentation.wazuh.com/current/user-manual/ruleset/index.html)
