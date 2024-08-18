@@ -2,9 +2,9 @@
 
 - [Introduction](#introduction)
 
-- [Wazuh Decoders](#wazuh-decoders)
+- [Wazuh Decoders](#wazuh%20decoders)
 
-- [Wazuh Rules](#wazuh-local-or-custom-rules)
+- [Wazuh Rules](#wazuh-local-or-custom-rules-(example))
 
 - [Python Logging](#python-logging)
 
@@ -62,7 +62,7 @@ Decoder example
 
 ```
 
-## Wazuh local or custom rules
+## Wazuh local or custom rules (example)
 
 ### [Wazuh Rules Documentation](https://documentation.wazuh.com/current/user-manual/ruleset/ruleset-xml-syntax/rules.html) 
 
