@@ -4,7 +4,7 @@
 
 - [Wazuh Decoders](#wazuh%20decoders)
 
-- [Wazuh Rules](#wazuh-local-or-custom-rules-(example))
+- [Wazuh Rules](#wazuh-local-or-custom-rules-example)
 
 - [Python Logging](#python-logging)
 
