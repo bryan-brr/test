@@ -62,6 +62,56 @@ Decoder example
 
 ```
 
+```xml
+<decoder name="test-example">
+
+  <prematch>[\d+-\d+-\d+ \d+:\d+:\d+] local.INFO: Successful login</prematch>
+
+</decoder>
+
+
+
+<!-- User ID, Name Decoder Child -->
+
+<decoder name="child-example">
+
+  <parent>test-example</parent>
+
+  <regex>"user_id":(\d+),"name":"(\w+)"</regex>
+
+  <order>user-id, name</order>
+
+</decoder>
+
+
+
+<!-- User Email Decoder Child -->
+
+<decoder name="child-example">
+
+  <parent>test-example</parent>
+
+  <regex>"email":"(\w+@\w+.\w+)"</regex>
+
+  <order>email</order>
+
+</decoder>
+
+
+
+<!-- User IP Decoder Child -->
+
+<decoder name="child-example">
+
+  <parent>test-example</parent>
+
+  <regex>"ip":"(\d+.\d+.\d+.\d+)"</regex>
+
+  <order>ip</order>
+
+</decoder>
+```
+
 ## Wazuh local or custom rules (example)
 
 ### [Wazuh Rules Documentation](https://documentation.wazuh.com/current/user-manual/ruleset/ruleset-xml-syntax/rules.html) 
