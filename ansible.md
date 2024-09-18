@@ -92,10 +92,47 @@ vim ansible-installer.sh
 **Inside this new file add the following instructions**
 
 ```bash
+#!/bin/bash
+# Check if required dependencies are installed
+dependencies=("wget" "gpg")
 UBUNTU_CODENAME=jammy
-wget -O- "https://keyserver.ubuntu.com/pks/lookup?fingerprint=on&op=get&search=0x6125E2A8C77F2818FB7BD15B93C4A3FD7BB9C367" | sudo gpg --dearmour -o /usr/share/keyrings/ansible-archive-keyring.gpg
-echo "deb [signed-by=/usr/share/keyrings/ansible-archive-keyring.gpg] http://ppa.launchpad.net/ansible/ansible/ubuntu $UBUNTU_CODENAME main" | sudo tee /etc/apt/sources.list.d/ansible.list
-sudo apt update && sudo apt install ansible
+
+for dep in "${dependencies[@]}"; do
+    if ! command -v $dep &> /dev/null; then
+        echo "$dep is not installed. Installing $dep..."
+        sudo apt update && sudo apt install -y $dep
+    else
+        echo "$dep is already installed."
+    fi
+done
+
+# File and keyring path
+keyring_path="/usr/share/keyrings/ansible-archive-keyring.gpg"
+list_path="/etc/apt/sources.list.d/ansible.list"
+
+# Check if the keyring file exists
+if [ ! -f "$keyring_path" ]; then
+    echo "Keyring not found. Downloading..."
+    wget -O- "https://keyserver.ubuntu.com/pks/lookup?fingerprint=on&op=get&search=0x6125E2A8C77F2818FB7BD15B93C4A3FD7BB9C367" | sudo gpg --dearmour -o "$keyring_path"
+else
+    echo "Keyring already exists."
+fi
+
+# Check if the sources list file exists
+if [ ! -f "$list_path" ]; then
+    echo "Adding Ansible PPA..."
+    echo "deb [signed-by=$keyring_path] http://ppa.launchpad.net/ansible/ansible/ubuntu $UBUNTU_CODENAME main" | sudo tee "$list_path"
+else
+    echo "Ansible PPA already exists."
+fi
+
+# Update and install Ansible
+if ! command -v ansible &> /dev/null; then
+    echo "Installing ansible"
+    sudo sudo apt-get update && apt-get install ansible -y
+else
+    echo "Ansible already installed."
+fi
 ```
 
 **Give Execution Privileges to the `ansible-installer file`**
