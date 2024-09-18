@@ -42,7 +42,7 @@ Before installing ansible, check the required dependencies:
 
 ```bash
 # Check if required dependencies are installed
-dpkg -s wget gpg | grep -i "^version" &&
+dpkg -s wget gpg | grep -i "^version"
 ```
 
 ### Install OpenSSH Client and Server
@@ -64,7 +64,7 @@ dpkg -s openssh-client openssh-server | grep -i "^version"
 **Generate Keys**
 
 ```bash
-ss-keygen -t rsa -b 2048
+ssh-keygen -t rsa -b 2048
 
 # passkey: passkey
 
@@ -78,7 +78,7 @@ ss-keygen -t rsa -b 2048
 Managed Nodes will be required with the generated public key
 
 ```bash
-ssh-copy-id [user]@[MANAGED-NODE-IP]
+ssh-copy-id user@MANAGED-NODE-IP
 ```
 
 ### Install Ansible Via Bash Script
@@ -108,6 +108,8 @@ chmod +x ansible-installer.sh
 ## Ansible Config
 
 ### Ansible Folder Structure
+
+By default ansible is located in `/etc/ansible` directory which requires root privileges for modifying its content
 
 ```bash
 sudo vim /etc/ansible/test-inventory # This file will be used for testing local nodes
