@@ -13,16 +13,29 @@
 
 ## Installing guide for Ubuntu 22.04
 
-https://docs.ansible.com/ansible/latest/installation_guide/installation_distros.html#installing-ansible-on-ubuntu
+[Ansible Official Docs](https://docs.ansible.com/ansible/latest/installation_guide/installation_distros.html#installing-ansible-on-ubuntu)
 
 ```bash
-sudo apt update && sudo apt upgrade
-sudo apt install software-properties-common
-sudo add-apt-repository --yes --update ppa:ansible/ansible
-sudo apt install ansible
+# Check if required dependencies are installed
+dpkg -s wget gpg | grep -i "^version" &&
 
-ansible --version
+# Create a new file for installing ansible
+vim ansible-installer.sh
 ```
+**Install Ansible Via Bash Script**
+
+```bash
+UBUNTU_CODENAME=jammy
+wget -O- "https://keyserver.ubuntu.com/pks/lookup?fingerprint=on&op=get&search=0x6125E2A8C77F2818FB7BD15B93C4A3FD7BB9C367" | sudo gpg --dearmour -o /usr/share/keyrings/ansible-archive-keyring.gpg
+echo "deb [signed-by=/usr/share/keyrings/ansible-archive-keyring.gpg] http://ppa.launchpad.net/ansible/ansible/ubuntu $UBUNTU_CODENAME main" | sudo tee /etc/apt/sources.list.d/ansible.list
+sudo apt update && sudo apt install ansible
+```
+
+```bash
+chmod +x ansible-installer.sh
+./ansible-installer.sh
+```
+
 
 ```bash
 nano /etc/ansible/ansible.cfg
@@ -35,7 +48,11 @@ ansible_python_interpreter = /usr/bin/python3
 ```
 
 
-### Ansible Guide:
+### Ansible Tutorials:
+
+- [Learn Ansible](https://learnansible.dev/article/Getting_Started_with_Ansible_A_Beginners_Guide.html)
+- [Ansible Tutorial](https://www.guru99.com/ansible-tutorial.html)
+- [Ansible Community Collections](https://docs.ansible.com/ansible/latest/collections/index.html)
 
 https://docs.paramiko.org/en/latest/api/channel.html
 
