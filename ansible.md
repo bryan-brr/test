@@ -65,7 +65,9 @@ dpkg -s openssh-client openssh-server | grep -i "^version"
 
 ```bash
 ssh-keygen -t rsa -b 2048
+```
 
+```bash
 # passkey: passkey
 
 # /home/user/.ssh/id_rsa  PRIVATE KEY
@@ -139,6 +141,9 @@ fi
 
 ```bash
 chmod +x ansible-installer.sh
+```
+
+```bash
 ./ansible-installer.sh
 ```
 
@@ -169,9 +174,14 @@ Inside this file we can establish default values
 # /etc/ansible/ansible.cfg
 
 [defaults]
-inventory = /etc/ansible/test-inventory  # Ansible Default Inventory File Path
+# Ansible Default Inventory File Path
+inventory = /etc/ansible/test-inventory
+
 remote_user = user
-private_key_file = ~/.ssh/id_rsa # PRIVATE KEY
+
+# PRIVATE KEY
+private_key_file = ~/.ssh/id_rsa
+
 ansible_python_interpreter = /usr/bin/python3
 ```
 
