@@ -131,7 +131,7 @@ fi
 # Update and install Ansible
 if ! command -v ansible &> /dev/null; then
     echo "Installing ansible"
-    sudo sudo apt-get update && apt-get install ansible -y
+    sudo apt-get update && sudo apt-get install ansible -y
 else
     echo "Ansible already installed."
 fi
